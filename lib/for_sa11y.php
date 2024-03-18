@@ -13,9 +13,7 @@ class Sa11y
      */
     public static function get(): string
     {
-        if ((!rex::getUser()?->isAdmin() && !rex::getUser()?->hasPerm('for_sa11y[sa11yCheck]')) || rex_addon::get('for_sa11y')->getConfig('active')  == 'false') {
-            return '';
-        }
+       
 
         $root = rex_escape(rex_addon::get('for_sa11y')->getConfig('root'));
         $ignore = rex_escape(rex_addon::get('for_sa11y')->getConfig('ignore')); 
